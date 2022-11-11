@@ -182,31 +182,4 @@ class LexicalScanner
             fputcsv($errorTableFile, [$word]);
         }
     }
-
-    /**
-     * This method generates the ST array, PIF array and Errors array
-     *
-     * @return void
-     */
-    public function setTableData(): void
-    {
-        foreach ($this->input as $value) {
-            $value = array_values($value)[0];
-            if ($this->isIdentifier($value)) {//verify if the value is identifier
-                $this->symbolTable[] = $value;
-
-                continue;
-            }
-
-            if ($this->isConstant($value)) {
-                $this->symbolTable[] = $value;
-
-                continue;
-            }
-
-            if (!in_array($value, self::TOKEN_TABLE)) {
-                $this->errorTable[] = $value;
-            }
-        }
-    }
 }

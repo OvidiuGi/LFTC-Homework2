@@ -13,7 +13,6 @@ $lexicalScanner = new LexicalScanner();
 $lexicalScanner->setInput($file);
 //with the input from file.txt, the function forms the SymbolTable array,
 //the PIF array and Error array
-//$lexicalScanner->setTableData();
 //Writes in a file the Symbol table
 $lexicalScanner->getSymbolTableFile($symbolTableFile);
 //Writes in a file the PIF table
