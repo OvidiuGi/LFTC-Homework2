@@ -33,6 +33,7 @@ class LexicalScanner
 
     /**
      * Creates the input array, without \n and any whitespaces
+     * And creates the symbolTable array, errorTable array
      *
      * @param $file
      * @return $this
@@ -46,7 +47,7 @@ class LexicalScanner
 
             foreach($words as $value2) {
                 $this->input[] = $value2;
-                if ($this->isIdentifier($value2)) {//verify if the value is identifier
+                if ($this->isIdentifier($value2)) {
                     $this->symbolTable[] = $value2;
 
                     continue;
@@ -59,7 +60,7 @@ class LexicalScanner
                 }
 
                 if (!in_array($value2, self::TOKEN_TABLE)) {
-                    $this->errorTable[] = $value2 . ' from line: ' .$lineNumber;
+                    $this->errorTable[] = $value2 . ' from line: ' .$lineNumber . ' |' . ' Lexical error';
                 }
             }
             $lineNumber++;

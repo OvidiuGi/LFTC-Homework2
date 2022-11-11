@@ -1,2 +1,2 @@
-"for from line: 6"
-"all from line: 6"
+"for from line: 6| Lexical error"
+"all from line: 6| Lexical error"
