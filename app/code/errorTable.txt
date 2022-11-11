@@ -1,0 +1,2 @@
+"for from line: 6"
+"all from line: 6"
