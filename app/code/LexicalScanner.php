@@ -68,7 +68,7 @@ class LexicalScanner
 
         $this->symbolTable = array_unique($this->symbolTable);
         $this->errorTable = array_unique($this->errorTable);
-        $this->input = array_unique($this->input);
+//        $this->input = array_unique($this->input);
 
         return $this;
     }
