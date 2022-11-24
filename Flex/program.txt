@@ -4,7 +4,7 @@ loob $ok = false ;
 if ( $n <= 1 ) {
 return $ok ;
 }
-for all $d between 2 , $n
+forall $d between 2 , $n
 {
 if ( $n % $d == 0 ) {
 $ok = true ;
